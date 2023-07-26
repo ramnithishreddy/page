@@ -21,7 +21,12 @@ function Sidebar(props) {
         Archives
       </Typography>
       {archives.map((archive) => (
-        <Link display="block" variant="body1" href={archive.url} key={archive.title}>
+        <Link
+          display="block"
+          variant="body1"
+          href={archive.url}
+          key={archive.title}
+        >
           {archive.title}
         </Link>
       ))}
@@ -51,14 +56,14 @@ Sidebar.propTypes = {
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
-    }),
+    })
   ).isRequired,
   description: PropTypes.string.isRequired,
   social: PropTypes.arrayOf(
     PropTypes.shape({
       icon: PropTypes.elementType,
       name: PropTypes.string.isRequired,
-    }),
+    })
   ).isRequired,
   title: PropTypes.string.isRequired,
 };
